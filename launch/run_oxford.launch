@@ -1,0 +1,36 @@
+<launch>
+
+    <arg name="project"       default="lio_sam"/>
+    <arg name="publish_clock" default="--clock"/>
+    <arg name="autorun"       default="false"/>
+    
+    <param name="/use_sim_time" value="true" />
+    
+    <!-- LIO SAMPLE -->
+    <arg name="bag_file" default="/media/tmn/mySataSSD2/NewerCollegeDataset/01_short_experiment/01_short_experiment.bag"/>
+
+    <!-- Create the merge pointcloud -->
+    <!-- <node pkg="merge_lidar" type="merge_lidar_node" name="merge_lidar" respawn="true" output="log" required="false">
+        <rosparam file="$(find slict)/config/oxford.yaml" command="load"/>
+        <rosparam param="lidar_channels"> [16, 16] </rosparam>
+    </node> -->
+
+    <!-- Parameters -->
+    <rosparam file="$(find lio_sam)/config/oxford.yaml" command="load" />
+
+    <!--- LOAM -->
+    <include file="$(find lio_sam)/launch/include/module_loam.launch" />
+
+    <!--- Robot State TF -->
+    <!-- <include file="$(find lio_sam)/launch/include/module_robot_state_publisher.launch" /> -->
+
+    <!--- Run Navsat -->
+    <!-- <include file="$(find lio_sam)/launch/include/module_navsat.launch" /> -->
+
+    <node required="true" pkg="rosbag" type="play" name="rosbag_play"
+          args="$(arg publish_clock) $(arg bag_file)"/>
+
+    <!--- Run Rviz-->
+    <node pkg="rviz" type="rviz" name="$(arg project)_rviz" args="-d $(find lio_sam)/launch/oxford.rviz" />
+
+</launch>
