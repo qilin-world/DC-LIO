@@ -1,0 +1,47 @@
+[
+  {
+    "dataset": "result_eee_01_0anc",
+    "pos_ate_m": 0.07483060293762941,
+    "rot_rmse_deg": 1.9189413207279749
+  },
+  {
+    "dataset": "result_eee_02_0anc",
+    "pos_ate_m": 0.0678959714205008,
+    "rot_rmse_deg": 1.8459752947911054
+  },
+  {
+    "dataset": "result_eee_03_0anc",
+    "pos_ate_m": 0.10151807348222192,
+    "rot_rmse_deg": 1.9135824176281977
+  },
+  {
+    "dataset": "result_nya_01_0anc",
+    "pos_ate_m": 0.07686953125408322,
+    "rot_rmse_deg": 2.6904404123218706
+  },
+  {
+    "dataset": "result_nya_02_0anc",
+    "pos_ate_m": 0.09092246649783377,
+    "rot_rmse_deg": 3.439553712347264
+  },
+  {
+    "dataset": "result_nya_03_0anc",
+    "pos_ate_m": 0.15080988401218964,
+    "rot_rmse_deg": 4.029013224212568
+  },
+  {
+    "dataset": "result_sbs_01_0anc",
+    "pos_ate_m": 0.08651123955235054,
+    "rot_rmse_deg": 2.8559428978990606
+  },
+  {
+    "dataset": "result_sbs_02_0anc",
+    "pos_ate_m": 0.08864567449364494,
+    "rot_rmse_deg": 2.8620735640442176
+  },
+  {
+    "dataset": "result_sbs_03_0anc",
+    "pos_ate_m": 0.0840957044832187,
+    "rot_rmse_deg": 1.6068182809231804
+  }
+]
